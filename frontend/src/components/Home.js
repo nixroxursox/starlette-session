@@ -1,4 +1,5 @@
 import logo from '../logo.svg';
+import SingleProduct from './SingleProduct';
 
 function Home(){
     return (
@@ -68,126 +69,14 @@ function Home(){
             {/* Latest Products Section */}
             <h3 className='mb-4'>Latest Products<a href='#' className='float-end btn btn-dark mt-1'>View All Products <i className="fa-solid fa-arrow-right-long"></i></a></h3>
             <div className='row mb-4'>
-                {/*Product Box */}
-                <div className='col-12 col-md-3 mb-4'>
-                <div className="card shadow">
-                    <img src={logo} className="card-img-top" alt="..."/>
-                    <div className="card-body">
-                    <h4 className="card-title">Product title</h4>
-                    <h5 className="card-title text-muted">Price: ₱500</h5>
-                    </div>
-                    <div className='card-footer'>
-                    <button title='Add to Cart' className='btn btn-dark btn-sm'><i className="fa-solid fa-cart-plus"></i></button>
-                    <button title='Add to Wishlist' className='btn btn-dark btn-sm ms-1'><i className="fa fa-heart"></i></button>
-                    </div>
-                </div>
-                </div>
-                {/*Product Box End*/}
-                {/*Product Box */}
-                <div className='col-12 col-md-3 mb-4'>
-                <div className="card shadow">
-                    <img src={logo} className="card-img-top" alt="..."/>
-                    <div className="card-body">
-                    <h4 className="card-title">Product title</h4>
-                    <h5 className="card-title text-muted">Price: ₱500</h5>
-                    </div>
-                    <div className='card-footer'>
-                    <button title='Add to Cart' className='btn btn-dark btn-sm'><i className="fa-solid fa-cart-plus"></i></button>
-                    <button title='Add to Wishlist' className='btn btn-dark btn-sm ms-1'><i className="fa fa-heart"></i></button>
-                    </div>
-                </div>
-                </div>
-                {/*Product Box End*/}
-                {/*Product Box */}
-                <div className='col-12 col-md-3 mb-4'>
-                <div className="card shadow">
-                    <img src={logo} className="card-img-top" alt="..."/>
-                    <div className="card-body">
-                    <h4 className="card-title">Product title</h4>
-                    <h5 className="card-title text-muted">Price: ₱500</h5>
-                    </div>
-                    <div className='card-footer'>
-                    <button title='Add to Cart' className='btn btn-dark btn-sm'><i className="fa-solid fa-cart-plus"></i></button>
-                    <button title='Add to Wishlist' className='btn btn-dark btn-sm ms-1'><i className="fa fa-heart"></i></button>
-                    </div>
-                </div>
-                </div>
-                {/*Product Box End*/}
-                {/*Product Box */}
-                <div className='col-12 col-md-3 mb-4'>
-                <div className="card shadow">
-                    <img src={logo} className="card-img-top" alt="..."/>
-                    <div className="card-body">
-                    <h4 className="card-title">Product title</h4>
-                    <h5 className="card-title text-muted">Price: ₱500</h5>
-                    </div>
-                    <div className='card-footer'>
-                    <button title='Add to Cart' className='btn btn-dark btn-sm'><i className="fa-solid fa-cart-plus"></i></button>
-                    <button title='Add to Wishlist' className='btn btn-dark btn-sm ms-1'><i className="fa fa-heart"></i></button>
-                    </div>
-                </div>
-                </div>
-                {/*Product Box End*/}
-                {/*Product Box */}
-                <div className='col-12 col-md-3 mb-4'>
-                <div className="card shadow">
-                    <img src={logo} className="card-img-top" alt="..."/>
-                    <div className="card-body">
-                    <h4 className="card-title">Product title</h4>
-                    <h5 className="card-title text-muted">Price: ₱500</h5>
-                    </div>
-                    <div className='card-footer'>
-                    <button title='Add to Cart' className='btn btn-dark btn-sm'><i className="fa-solid fa-cart-plus"></i></button>
-                    <button title='Add to Wishlist' className='btn btn-dark btn-sm ms-1'><i className="fa fa-heart"></i></button>
-                    </div>
-                </div>
-                </div>
-                {/*Product Box End*/}
-                {/*Product Box */}
-                <div className='col-12 col-md-3 mb-4'>
-                <div className="card shadow">
-                    <img src={logo} className="card-img-top" alt="..."/>
-                    <div className="card-body">
-                    <h4 className="card-title">Product title</h4>
-                    <h5 className="card-title text-muted">Price: ₱500</h5>
-                    </div>
-                    <div className='card-footer'>
-                    <button title='Add to Cart' className='btn btn-dark btn-sm'><i className="fa-solid fa-cart-plus"></i></button>
-                    <button title='Add to Wishlist' className='btn btn-dark btn-sm ms-1'><i className="fa fa-heart"></i></button>
-                    </div>
-                </div>
-                </div>
-                {/*Product Box End*/}
-                {/*Product Box */}
-                <div className='col-12 col-md-3 mb-4'>
-                <div className="card shadow">
-                    <img src={logo} className="card-img-top" alt="..."/>
-                    <div className="card-body">
-                    <h4 className="card-title">Product title</h4>
-                    <h5 className="card-title text-muted">Price: ₱500</h5>
-                    </div>
-                    <div className='card-footer'>
-                    <button title='Add to Cart' className='btn btn-dark btn-sm'><i className="fa-solid fa-cart-plus"></i></button>
-                    <button title='Add to Wishlist' className='btn btn-dark btn-sm ms-1'><i className="fa fa-heart"></i></button>
-                    </div>
-                </div>
-                </div>
-                {/*Product Box End*/}
-                {/*Product Box */}
-                <div className='col-12 col-md-3 mb-4'>
-                <div className="card shadow">
-                    <img src={logo} className="card-img-top" alt="..."/>
-                    <div className="card-body">
-                    <h4 className="card-title">Product title</h4>
-                    <h5 className="card-title text-muted">Price: ₱500</h5>
-                    </div>
-                    <div className='card-footer'>
-                    <button title='Add to Cart' className='btn btn-dark btn-sm'><i className="fa-solid fa-cart-plus"></i></button>
-                    <button title='Add to Wishlist' className='btn btn-dark btn-sm ms-1'><i className="fa fa-heart"></i></button>
-                    </div>
-                </div>
-                </div>
-                {/*Product Box End*/}
+                <SingleProduct title="Xiaomi"/>
+                <SingleProduct title="Xiaomi"/>
+                <SingleProduct title="Xiaomi"/>
+                <SingleProduct title="Xiaomi"/>
+                <SingleProduct title="Xiaomi"/>
+                <SingleProduct title="Xiaomi"/>
+                <SingleProduct title="Xiaomi"/>
+                <SingleProduct title="Xiaomi"/>
             </div>
             {/* End Latest Products */}
 
