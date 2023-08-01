@@ -18,7 +18,7 @@ This is a Multi-Vendor E-Commerce Platform. Customers can purchase used and 2nd 
 --------------------------------------------------------
 - Sort according to price, latest, alphabet, views
 --------------------------------------------------------
-- Product Detail
+- Product Details
     - Checkout Page
         - COD/Cash On Delivery
         - PayPal
