@@ -39,6 +39,35 @@ function App() {
               </button>
             </div>
             {/* End Banner: Carousel */}
+
+            {/*Category Box */}
+            <div className='col-12 col-md-3 mb-4'>
+              <div className="card shadow">
+                <a href='#'><img src='https://cf.shopee.ph/file/ph-50009109-e2098e64ba89e9a9ad88414a05bb417b_xhdpi' className="card-img-top" alt="..."/></a>
+              </div>
+            </div>
+            {/*Category Box End*/}
+            {/*Category Box */}
+            <div className='col-12 col-md-3 mb-4'>
+              <div className="card shadow">
+                <a href='#'><img src='https://cf.shopee.ph/file/ph-50009109-e2098e64ba89e9a9ad88414a05bb417b_xhdpi' className="card-img-top" alt="..."/></a>
+              </div>
+            </div>
+            {/*Category Box End*/}
+            {/*Category Box */}
+            <div className='col-12 col-md-3 mb-4'>
+              <div className="card shadow">
+                <a href='#'><img src='https://cf.shopee.ph/file/ph-50009109-e2098e64ba89e9a9ad88414a05bb417b_xhdpi' className="card-img-top" alt="..."/></a>
+              </div>
+            </div>
+            {/*Category Box End*/}
+            {/*Category Box */}
+            <div className='col-12 col-md-3 mb-4'>
+              <div className="card shadow">
+                <a href='#'><img src='https://cf.shopee.ph/file/ph-50009109-e2098e64ba89e9a9ad88414a05bb417b_xhdpi' className="card-img-top" alt="..."/></a>
+              </div>
+            </div>
+            {/*Category Box End*/}
           </div>
 
 
