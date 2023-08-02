@@ -9,7 +9,7 @@ function Home(){
             <div className='container'>
             {/* Banner: Carousel */}
             <div className='row'>
-                <div id="carouselExampleDark" className="carousel carousel-dark slide col-12 mb-4" data-bs-ride='carousel'>
+                <div id="carouselExampleDark" className="carousel carousel-dark slide col-9 mb-4" data-bs-ride='carousel'>
                 <div className="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -38,31 +38,9 @@ function Home(){
                 {/* End Banner: Carousel */}
 
                 {/*Category Box */}
-                <div className='col-12 col-md-3 mb-4'>
-                <div className="card shadow">
-                    <a href='#'><img src='https://cf.shopee.ph/file/ph-50009109-e2098e64ba89e9a9ad88414a05bb417b_xhdpi' className="card-img-top" alt="..."/></a>
-                </div>
-                </div>
-                {/*Category Box End*/}
-                {/*Category Box */}
-                <div className='col-12 col-md-3 mb-4'>
-                <div className="card shadow">
-                    <a href='#'><img src='https://cf.shopee.ph/file/ph-50009109-e2098e64ba89e9a9ad88414a05bb417b_xhdpi' className="card-img-top" alt="..."/></a>
-                </div>
-                </div>
-                {/*Category Box End*/}
-                {/*Category Box */}
-                <div className='col-12 col-md-3 mb-4'>
-                <div className="card shadow">
-                    <a href='#'><img src='https://cf.shopee.ph/file/ph-50009109-e2098e64ba89e9a9ad88414a05bb417b_xhdpi' className="card-img-top" alt="..."/></a>
-                </div>
-                </div>
-                {/*Category Box End*/}
-                {/*Category Box */}
-                <div className='col-12 col-md-3 mb-4'>
-                <div className="card shadow">
-                    <a href='#'><img src='https://cf.shopee.ph/file/ph-50009109-e2098e64ba89e9a9ad88414a05bb417b_xhdpi' className="card-img-top" alt="..."/></a>
-                </div>
+                <div className='col-3 col-md-3'>
+                    <a href='#'><img src='https://cf.shopee.ph/file/ph-50009109-e2098e64ba89e9a9ad88414a05bb417b_xhdpi' className="card-img-top mt-2 mb-3" alt="..."/></a>
+                    <a href='#'><img src='https://cf.shopee.ph/file/ph-50009109-e2098e64ba89e9a9ad88414a05bb417b_xhdpi' className="card-img-bottom mt-2" alt="..."/></a>
                 </div>
                 {/*Category Box End*/}
             </div>
