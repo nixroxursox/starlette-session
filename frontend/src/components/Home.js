@@ -1,3 +1,5 @@
+import {Link} from 'react-router-dom';
+
 import logo from '../logo.svg';
 import SingleProduct from './SingleProduct';
 
@@ -67,7 +69,7 @@ function Home(){
 
 
             {/* Latest Products Section */}
-            <h3 className='mb-4'>Latest Products<a href='#' className='float-end btn btn-dark mt-1'>View All Products <i className="fa-solid fa-arrow-right-long"></i></a></h3>
+            <h3 className='mb-4'>Latest Products<Link to='/products' className='float-end btn btn-dark mt-1'>View All Products <i className="fa-solid fa-arrow-right-long"></i></Link></h3>
             <div className='row mb-4'>
                 <SingleProduct title="Xiaomi"/>
                 <SingleProduct title="Xiaomi"/>
@@ -82,7 +84,7 @@ function Home(){
 
 
             {/* Popular Categories Section */}
-            <h3 className='mb-4'>Popular Categories<a href='#' className='float-end btn btn-dark mt-1'>View All Categories <i className="fa-solid fa-arrow-right-long"></i></a></h3>
+            <h3 className='mb-4'>Popular Categories<a href='#' className='float-end btn btn-dark mt-1'>View All Popular Categories <i className="fa-solid fa-arrow-right-long"></i></a></h3>
             <div className='row mb-4'>
                 {/*Category Box */}
                 <div className='col-12 col-md-3 mb-4'>
