@@ -1,0 +1,23 @@
+from accounts import User
+user = 'rjarja67'
+pw = "changeMe"
+pi = 1202020202
+st = "blahblahblah"
+pgp = '[-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+mDMEZK8svxYJKwYBBAHaRw8BAQdAPkJErTgIfLCfCadNmQxon08giuIzqbMlwJvE
+tA+fAg+0JVJvY2t5IEFsbGVuIDxyb2NreS5qLmFsbGVuQGdtYWlsLmNvbT6ImQQT
+FgoAQRYhBJnTSAo4QkaFK6bw0UfYuKIqv9hPBQJkryy/AhsDBQkFo5qABQsJCAcC
+AiICBhUKCQgLAgQWAgMBAh4HAheAAAoJEEfYuKIqv9hPYmcBAImZWOhomHeuUe2a
+GiCfITP7ZWAXbHBPZCvlqRLo7K4VAQC1G69tkAamwOJiMs3w7iNWMMGd1/Hz3/7e
+2kM40RBWCLg4BGSvLL8SCisGAQQBl1UBBQEBB0DLSFSA4xvUpa4bk+ZKUsu58kkQ
+yQBI1EJxLsXkO4pNbwMBCAeIfgQYFgoAJhYhBJnTSAo4QkaFK6bw0UfYuKIqv9hP
+BQJkryy/AhsMBQkFo5qAAAoJEEfYuKIqv9hPU7UA/2uY/k/VfXPdfE4CZ3XfF1Dx
+pnKmLgG5rLagYxfOMXbBAQCll7VhESsJ12JW7kQJJ+mciAXH2t77eEdUOPZXP6jQ
+Bw==
+=ncQF
+-----END PGP PUBLIC KEY BLOCK-----]'
+nname = "therealnix"
+
+u = User
+

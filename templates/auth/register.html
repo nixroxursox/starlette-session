@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block body %}
+{% block regForm%}
+<button onclick="document.getElementById('modalLoginForm').style.display='block'" class="w3-btn w3-green w3-large">Login</button>
+
+{% include "auth/regForm.html" %}
+
+
+<div class="w3-modal w3-card-8">
+<form method="post" action="http://localhost:8082/create-account" class="w3-modal-content">
+<div>
+   <p>Please Register to get started.</p>
+   {% for field in form %}
+       {{ field.name }}
+       {{ field.label }}
+       {{ field.id }}
+       {{ field }}
+       {% if field.errors %}<cite>{{ field.errors|join(' ') }}</cite>{% endif %}
+   {% endfor %}
+</div>
+</form>
+</div>
+
+
+{% endblock regForm %}
+{% endblock body %}

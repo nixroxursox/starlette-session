@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% block head %}
+    {% include "head.html" %}
+{% endblock head %}
+
+  <body class="">
+  {% block body %}
+  {% block login %}
+  {% if request["url_path"] == '/login' %}
+  {% include "auth/login.html "%}
+   {% endif %}
+  {% endblock login %}
+
+  {% block reg %}
+{% if request["url_path"] == '/create-account' %}  
+    {% include "auth/register.html" %}
+     {% endif %}
+  {% endblock reg %}
+
+
+  <footer id="footer>
+  <div id="footer">
+    {% block footer %}
+    &copy; Copyright 2008 by <a href="http://nix.onion/">you</a>.
+    {% endblock footer %}
+  </div>
+  </footer>
+  {% endblock body %} 
+</body>
+</html>
