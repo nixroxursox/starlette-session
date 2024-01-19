@@ -1,0 +1,1 @@
+fastapi-socketio==0.0.10
