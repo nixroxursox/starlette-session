@@ -47,9 +47,10 @@ WORKDIR /app/
 RUN set -ex; \
     echo "change_me to update starlette like_so..."; \
     git clone https://github.com/nixroxursox/starlette.git; \
-    cd starlette; 
+    cd starlette; \
+    git pull origin;
 
-COPY  requirements.txt /app/starlette/ 
+COPY  requirements.txt newreq.txt /app/starlette/ 
 COPY  .bashrc /home/starlette/
 
 USER $USERNAME
@@ -57,10 +58,18 @@ USER $USERNAME
 RUN set -ex; \
     cd /app/starlette \
     && . /home/$USERNAME/.python/bin/activate; \
-    python -m pip install -r requirements.txt; \
-    sudo apt-get update 
+    python -m pip install -r requirements.txt;
+
+RUN set -eux; \
+    sudo apt-get update
+
+RUN set -ex; \
+    cd /app/starlette \
+    && . /home/$USERNAME/.python/bin/activate; \
+    python -m pip install -r newreq.txt;
+
 
 WORKDIR /app/website
 
-CMD ["/home/starlette/.python/bin/gunicorn", "app:app", "--workers", "6", "--worker-class", "uvicorn.workers.UvicornWorker", "--bind", "unix:/tmp/eCom.sock", "--backlog", "1024", "--threads", "24"]
+CMD ["/home/starlette/.python/bin/gunicorn", "app:app", "--workers", "6", "--worker-class", "uvicorn.workers.UvicornWorker", "--bind", "unix:/tmp/eCom.sock", "--backlog", "1024", "--threads", "24", "--access-logfile", "/proc/self/fd/1", "--error-logfile", "/proc/self/fd/2", "--log-level", "debug"]
 #CMD ["/home/starlette/.python/bin/python", "app.py"]

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<div class="card shadow-lg p-3 mb-5 bg-body rounded" style="width: 550px" id="reg-card card-content">
+    <div class="card-title card-img-top row justify-content-center align-items-center">
+      {{ title }}
+    </div>
+
+{% block body %}
+<h1>Session Data</h1>
+<p>Session: {{session}}</p>
+<hr>
+
+   {% endblock body %}
+
+    {% endblock content %}

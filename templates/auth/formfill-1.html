@@ -1,0 +1,13 @@
+{% block formfill %}
+    <div>
+       <p>Please {{ 'message' }} to get started.</p>
+       {% for field in form %}
+           {{ field.name }}
+           {{ field.label }}
+           {{ field.id }}
+           {{ field }}
+           {% if field.errors %}<cite>{{ field.errors|join(' ') }}</cite>{% endif %}
+       {% endfor %}
+    </div>
+</form>
+{% endblock formfill %}

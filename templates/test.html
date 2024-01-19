@@ -1,10 +1,96 @@
-<div>
-   <p>Please Register to get started.</p>
-   {% for field in form %}
-       {{ field.name }}
-       {{ field.label }}
-       {{ field.id }}
-       {{ field }}
-       {% if field.errors %}<cite>{{ field.errors|join(' ') }}</cite>{% endif %}
-   {% endfor %}
-</div>
+<!DOCTYPE HTML PUBLIC>
+  <html lang="en" xmlns="http://www.w3.org">
+  <head>
+    <style>
+
+    @import url('http://localhost:8080/style/boot/bootstrap5.css');
+
+    </style>
+    </head>
+    <body>
+
+
+<div class="form" id="card card-title">
+    {% from "_formhelpers.html" import render_field %}
+    <form method="post" action="/register" class="w3-modal-content">
+    <div>
+       <p>Please Register to get started.</p>
+       {% for field in form %}
+           {{ render_field(form.username.label)}}
+           {{ render_field(field.label) }}
+           {{ render_field(field) }}
+           {% if field.errors %}<cite>{{ field.errors|join(' ') }}</cite>{% endif %}
+       {% endfor %}
+    </div>
+    </form>
+    </div>
+
+
+
+    <div class="btn-group">
+        <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Large button
+        </button>
+        <ul class="dropdown-menu">
+          ...
+        </ul>
+      </div>
+      <div class="btn-group">
+        <button class="btn btn-secondary btn-lg" type="button">
+          Large split button
+        </button>
+        <button type="button" class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+          <span class="visually-hidden">Toggle Dropdown</span>
+        </button>
+        <ul class="dropdown-menu">
+          ...
+        </ul>
+      </div>
+
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+
+
+
+
+
+
+
+      </body>
+      </html>

@@ -1,75 +1,168 @@
 [{
   "_id": {
-    "$oid": "64921a6ce340b420bf67e27e"
+    "$oid": "64e3e4f6b3a8730bac944f67"
   },
-  "reg_data": {
-    "pgpKey": "-----BEGIN PGP PUBLIC KEY BLOCK-----  mQINBGIWTroBEADgSBs1z1MC5Hog5yd2wYHskzPE0SOl9LGB35Xhw1894hrKsswp AS7JnViltXE71iJMoAqepJBvfmZLOyQO0rXcLlHXExK/IctnosRqGQeyLxNZKS0h e1xQYQrPCWRaHqseYLuJ5wME49aFQ2YS7caFowBvKjsT5AoT7B0uXDp6nHZDUQG2 MBZJqUKziVYYt7PARv81llDNKqPvLDSc2McL/2aa4mNR/pM5r8iQjACbSnj37ERm zca2gJ0GzCeZSqfmjoF7I6Ez1Nc/2ge1+fZA24pDFg+7W25du3JIqbnpJQAK5TAz 7tVzvEKU8WT9aQW3G1e5ox3YtlRPTSrTxN9dzLh123NGCd0J9a4moFkZIr8HmySd jkdz4V1pKv9aTOhLjQpF/bhRaUuNuGK7TV7ZzY+PCVE51fmJx2EX4Ck5c6sW03rJ 59KbrxeTq02AcIBTFUY0Mfh7nxvYvwvLI0OKBOqFGXi4hFXpV4uo0rDLe+tGLFDD +HsajFUUyAlMETE80PXOuTs44TZiW+SGCTyP2Sm8TBIiacSqsGNsryjgEDaIG6c1 FB++njqTfGlyZujamYbF3s3wBK8nDBVRympJcsHjLqUhvbh1Bq4hyF2pxio93SgA mPEm6kl0KBCqpJNZpAFSVHK8penQtQUa0jFQetYPDUFfgTsg7qdZDQNcUwARAQAB tDdNb25nb0RCIDYuMCBSZWxlYXNlIFNpZ25pbmcgS2V5IDxwYWNrYWdpbmdAbW9u Z29kYi5jb20+iQI+BBMBAgAoBQJiFk66AhsDBQkJZgGABgsJCAcDAgYVCAIJCgsE FgIDAQIeAQIXgAAKCRBqJrGuZMPDiADhEACex1qu1HbVIeBwZO4GYYEc8OpswguI LvTL1ufWMVbpSFkm0XDzx7JU0SewCEBzr7BTri2zjNaPm7RQHYFl1ztTnNvxrvzu AUoj/BClAgQXujSuUcEu+uA9pBHObiLHAkYFy61EnKgXu2iTOMn7HqRvjvHZyOnr 5llGG2zUq8YbEVs4GTHVV9CjCWBkf78stdqEAPCH69DtR1Bv2jQfUslVSDKUnluX feTRDgWXnIKo4ld6EoqtYurIbcJIGvXHbFx90PoZiPJXn+eTY+6HS3I/TXDGAOkF xkgmVsPWcZvbU0dLXjAiTIADODyiEiZlonrxYXJztIs/KXLl5CnvAEeXKXACbgaN nuIMKtprtrLvFDpXwfyI90He0Vv8iE1wXSLcuztT5R1h6NmisMz9oRYQL3hqsSEn TjV+Ko34Kyo459Bs9PhJO0DcZGg+B8iU9TdJgfp1KEs2HJFAueVtYAUJ3y5+UJFn AkQoD5CC0Y+93z0+nHQPvjyxQ/7swFWNtrumrthcpYbGMIKEWqaQoEz2My5gVXHh v5pHEXxXiARNe44GsS8r+1DYQypDUAh5Tw9mQRagWuC5Dsaaqob5vCdcFEAgiK5W a/coP3B6WzUoQE8NKa8qnKDvX5RU0dxG5oUre+PuOwiHpom9G+375YYkwIL9a6pE RRM5efxf1F532A== =Cc71 -----END PGP PUBLIC KEY BLOCK-----",
-    "userId": "rjallen",
-    "nickName": "friendlyName",
-    "password": "b'$7$C6..../....TX4DWdkpr.OjFbmOy75UjTtQV/b8YrnMdPUtSnpwOG2$3PzEg3HFT/7uQS/zX/VdyRj.OCQhaZyaSz9KlZ9hW79'",
-    "pinCode": "b'$7$C6..../....K6P7TYfQLjbLHfb6fYiKVdKq2c5PDCnJF1J5jUstIoD$x95G9VqtcpPVttYEsmxuSjOysS6.ovZ3KqE6NcqQ1H1'",
-    "masterId": 100000001,
-    "personalStateMent": "bblah",
+  "reg_Data": {
+    "pgpKey": "pgp",
+    "userId": "rja69698608969",
+    "password": {
+      "$binary": {
+        "base64": "JGFyZ29uMmlkJHY9MTkkbT02NTUzNix0PTIscD0xJDQ4RHV6NUYrdzZ1NDVkcDJSd2JycnckSXVrSTR1YkQraTVQVSswdEpZUVkrNmNSN2Rvb1JqUnFybDJ4a1BQdGdrZw==",
+        "subType": "00"
+      }
+    },
+    "pinCode": {
+      "$binary": {
+        "base64": "JDckQzYuLi4uLy4uLi4xVWJNdjRyWVlvRFh1bU82UzlCdGJkbmN5dG4xSEF6WlJ1ZGlPWUlteW9DJDJEVEU0N1lmRlllYjNhWDQ4ajZ2UEl2VHM3L3hBYTl0QkZtUWViaTFCOEM=",
+        "subType": "00"
+      }
+    },
+    "nname": "therealnix",
+    "pState": "a personal statement",
     "memberSince": {
-      "$date": "2000-01-01T05:00:00.000Z"
-    }
-  },
-  "images": {
-    "thumbnail_url": "ks nfl",
-    "medium_url": "nruls",
-    "picture_url": "https://a0.muscache.com/im/pictures/e83e702f-ef49-40fb-8fa0-6512d7e26e9b.jpg?aki_policy=large",
-    "xl_picture_url": "lslsls"
-  },
-  "rating": "blahblah",
-  "lastLogin": {
-    "$date": "2016-01-03T05:00:00.000Z"
-  },
-  "first_review": {
-    "$date": "2016-01-03T05:00:00.000Z"
-  },
-  "last_review": {
-    "$date": "2016-01-03T05:00:00.000Z"
-  },
-  "number_of_reviews": 51,
-  "review_scores": {
-    "review_scores_accuracy": 9,
-    "review_scores_cleanliness": 9,
-    "review_scores_checkin": 10,
-    "review_scores_communication": 10,
-    "review_scores_location": 10,
-    "review_scores_value": 9,
-    "review_scores_rating": 89
-  },
-  "reviews": [
-    {
-      "_id": "362865132",
-      "date": {
-        "$date": "2018-12-27T05:00:00.000Z"
-      },
-      "listing_id": "10006546",
-      "reviewer_id": "208880077",
-      "reviewer_name": "Thomas",
-      "comments": "Very helpful hosts. Cooked traditional..."
+      "$date": "2023-08-21T21:27:21.786Z"
     },
-    {
-      "_id": "364728730",
-      "date": {
-        "$date": "2018-12-31T05:00:00.000Z"
-      },
-      "listing_id": "10006546",
-      "reviewer_id": "91827533",
-      "reviewer_name": "Mr",
-      "comments": "Ana & Goncalo were great on communication..."
+    "isActive": true
+  },
+  "uid": 100010
+},
+{
+  "_id": {
+    "$oid": "64fa3e6a5d7dfcc0092a30b4"
+  },
+  "uid": 100011,
+  "reg_data": {
+    "pgpKey": "pgp",
+    "userId": "69rja69",
+    "password": {
+      "$binary": {
+        "base64": "JGFyZ29uMmlkJHY9MTkkbT02NTUzNix0PTIscD0xJGErS2NSK1V4VmhKT0gzSXdPT1Fma0EkUjJzcTdVcWVNS3JUSnJUdlVXRXRYMkozOGZBalRNdFdrOWpSbzk1TEFzcw==",
+        "subType": "00"
+      }
     },
-    {
-      "_id": "403055315",
-      "date": {
-        "$date": "2019-01-20T05:00:00.000Z"
-      },
-      "listing_id": "10006546",
-      "reviewer_id": "15138940",
-      "reviewer_name": "Milo",
-      "comments": "The house was extremely well located..."
-    }
-  ]
+    "pinCode": {
+      "$binary": {
+        "base64": "JDckQzYuLi4uLy4uLi5FWmdlQUx0U1pvbndDb1RIc3p4QmVVTjBhbDhlOURWUGJuUGhwc0gycUMvJGM3MjB6UFlVZ0IuUXZqampPcXR1NGMuQ2drRW1uMmYzZWFHdWtHN3JoeC4=",
+        "subType": "00"
+      }
+    },
+    "nname": "therealnix",
+    "pState": "boring personal statement",
+    "memberSince": {
+      "$date": "2023-09-07T21:19:38.573Z"
+    },
+    "isActive": true
+  }
+},
+{
+  "_id": {
+    "$oid": "64fa47c9ca921881bca5fa13"
+  },
+  "uid": 100012,
+  "reg_data": {
+    "pgpKey": "pgp",
+    "userId": "rjallen",
+    "password": {
+      "$binary": {
+        "base64": "JGFyZ29uMmlkJHY9MTkkbT02NTUzNix0PTIscD0xJFV0MktYZWxkKzRLd2tUa3plUnl4cFEkd1dTMzFBSWJ0ZUlZNkd6S05tczJ2NkJrVzB0STI4UmhCY2hRTVdjbW5LUQ==",
+        "subType": "00"
+      }
+    },
+    "pinCode": {
+      "$binary": {
+        "base64": "JDckQzYuLi4uLy4uLi5XM2RVMEc1WHlMaXVncXU1b25jLlRUUW02Z051S2Nna0s0OUFJOEdPWTQ2JGI2aFNlUnR3aC9EbzhBS281ZnZVV1NiYk5jck5nbDJrS3pxaDBwWFlCejA=",
+        "subType": "00"
+      }
+    },
+    "nname": "therealnix",
+    "pState": "boring personal statement",
+    "memberSince": {
+      "$date": "2023-09-07T21:59:37.617Z"
+    },
+    "isActive": true
+  }
+},
+{
+  "_id": {
+    "$oid": "64fa47f4ca921881bca5fa16"
+  },
+  "uid": 100013,
+  "reg_data": {
+    "pgpKey": "pgp",
+    "userId": "696969rja696969",
+    "password": {
+      "$binary": {
+        "base64": "JGFyZ29uMmlkJHY9MTkkbT02NTUzNix0PTIscD0xJDBOK21QdDY2amhJSU1LTmdMWWNoN2ckNXp2TGQwMUsyeCtTM0hFYnFUaXYvNmFvTlg3cTJLcDlxL1RoS0xYS1pZUQ==",
+        "subType": "00"
+      }
+    },
+    "pinCode": {
+      "$binary": {
+        "base64": "JDckQzYuLi4uLy4uLi5lRkZSbXJDRFdTUUFka2RvLjZ6dHFFZE0ucW1OdXI4MVlSckV4dThsY1k0JE1hTzFOa3pzckVJOU8xTlBtWUpxLnNHdGtTT1lLMjMvcTFiZXBGVWRIeDk=",
+        "subType": "00"
+      }
+    },
+    "nname": "therealnix",
+    "pState": "boring personal statement",
+    "memberSince": {
+      "$date": "2023-09-07T22:00:20.116Z"
+    },
+    "isActive": true
+  }
+},
+{
+  "_id": {
+    "$oid": "64fa6122b0759e342a0a0674"
+  },
+  "uid": 100014,
+  "reg_data": {
+    "pgpKey": "pgp",
+    "userId": "caroline",
+    "password": {
+      "$binary": {
+        "base64": "JGFyZ29uMmlkJHY9MTkkbT02NTUzNix0PTIscD0xJFB3VHR3VTFjNXZXZFU3Y3JvMWRyYUEkQ05EN2VCM2NXdk84Si9uS3pNTC9MUlFqRXY3VGpqeS95OGtnaHVWL202QQ==",
+        "subType": "00"
+      }
+    },
+    "pinCode": {
+      "$binary": {
+        "base64": "JDckQzYuLi4uLy4uLi5NTWRibE5XWDdrVExmMUlhMHBZenJyYzYzMXJjbEE0bDk0VnpCZ2RNMy4yJFlLMVVnNEFIbkoxMDJuS012Z2RiU1NIQVBUQXRHaS9rSVdFYVpMRHhVZTg=",
+        "subType": "00"
+      }
+    },
+    "nname": "therealnix",
+    "pState": "boring personal statement",
+    "memberSince": {
+      "$date": "2023-09-07T23:47:46.798Z"
+    },
+    "isActive": true
+  }
+},
+{
+  "_id": {
+    "$oid": "64fa628233bd65ccd9e6a8b4"
+  },
+  "uid": 100015,
+  "reg_data": {
+    "pgpKey": "pgp",
+    "userId": "69caroline69",
+    "password": {
+      "$binary": {
+        "base64": "JGFyZ29uMmlkJHY9MTkkbT02NTUzNix0PTIscD0xJEo0R2xYVHlGYnRVUENXYkhxb3E4cVEkOS82UDFjeUc4STRXMi9yNkh4RUlHQjdtWTI2QkhyeVhKYkwyRGpoWVBtUQ==",
+        "subType": "00"
+      }
+    },
+    "pinCode": {
+      "$binary": {
+        "base64": "JDckQzYuLi4uLy4uLi5LZWFudndBVnZWSENYczRycFRVeHQ5dng3Wk9PU0tqZDk5RUltdGlyU1lBJDFFc1RPT3A3a1pCaXhuYmc2aXlvZnRHUTY4cHB1MWVOUXNEYWxXbVJhSi8=",
+        "subType": "00"
+      }
+    },
+    "nname": "therealnix",
+    "pState": "boring personal statement",
+    "memberSince": {
+      "$date": "2023-09-07T23:53:38.823Z"
+    },
+    "isActive": true
+  }
 }]

@@ -1,0 +1,152 @@
+[{
+  "_id": {
+    "$oid": "652ddcb349428003c6bae34c"
+  },
+  "session_data": {
+    "session_id": "5b9fb59ac73e9a1c88a8b898811ab677",
+    "data": {
+      "path": "/",
+      "http": "httponly",
+      "samesite": "lax"
+    },
+    "lifetime": 360,
+    "ttl": 10
+  }
+},
+{
+  "_id": {
+    "$oid": "652ddce249428003c6bae34e"
+  },
+  "session_data": {
+    "session_id": "9348d82528bacbe4eb36e862059a5359",
+    "lifetime": 360,
+    "ttl": 10,
+    "data": {
+      "path": "/",
+      "http": "httponly",
+      "samesite": "lax"
+    },
+    "metadata": {
+      "created": 1697672811.4283042,
+      "lifetime": 360,
+      "last_access": 1697600938.4050584
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "652dde3adbf731d039bd5d3a"
+  },
+  "session_data": {
+    "session_id": "e5f4c1228e4d2f4b7a9d3e7939dc31aa",
+    "lifetime": 360,
+    "ttl": 10
+  }
+},
+{
+  "_id": {
+    "$oid": "6532fed6563aee0f0faebec4"
+  },
+  "session_data": {
+    "session_id": "9348d82528bacbe4eb36e862059a5359",
+    "session_data.metadata.data": {
+      "session_id": "9348d82528bacbe4eb36e862059a5359",
+      "lifetime": 360,
+      "created": 1697840727.9902842,
+      "last_access": 1697840727.9902844
+    },
+    "session_data.metadata.lifetime": 360,
+    "session_data.metadata.ttl": 10
+  }
+},
+{
+  "_id": {
+    "$oid": "6532fedf563aee0f0faebec5"
+  },
+  "session_data": {
+    "session_id": "9348d82528bacbe4eb36e862059a5359",
+    "metadata": {
+      "data": "",
+      "lifetime": 360,
+      "created": 1697840727.9902842,
+      "last_access": 1697840727.9902844
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6533047b563aee0f0faebec6"
+  },
+  "session_data": {
+    "session_id": "9348d82528bacbe4eb36e862059a5359"
+  }
+},
+{
+  "_id": {
+    "$oid": "65330482563aee0f0faebec7"
+  },
+  "session_data": {
+    "session_id": "9348d82528bacbe4eb36e862059a5359"
+  }
+},
+{
+  "_id": {
+    "$oid": "65330506563aee0f0faebec8"
+  },
+  "session_data": {
+    "metadata": {
+      "created": 1697842420.9930325,
+      "lifetime": 360,
+      "last_access": 1697842437.1600418
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "65330521563aee0f0faebec9"
+  },
+  "session_data": {
+    "metadata": {
+      "data": {
+        "session_id": "9348d82528bacbe4eb36e862059a5359",
+        "lifetime": 360,
+        "created": 1697840727.9902842,
+        "last_access": 1697840727.9902844
+      },
+      "created": 1697842420.9930325,
+      "lifetime": 360,
+      "last_access": 1697842437.1600418
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "653305c7563aee0f0faebeca"
+  },
+  "session_data": {
+    "session_id": "9348d82528bacbe4eb36e862059a5359"
+  }
+},
+{
+  "_id": {
+    "$oid": "653306e4563aee0f0faebecc"
+  },
+  "session_data": {
+    "session_id": "9ef5eecfc6d1c893b861a69906d8a523"
+  }
+},
+{
+  "_id": {
+    "$oid": "653307c7563aee0f0faebecd"
+  },
+  "session_data": {
+    "session_id": "9ef5eecfc6d1c893b861a69906d8a523",
+    "metadata": {
+      "data": "",
+      "created": "",
+      "last_access": "",
+      "lifetime": "",
+      "ttl": ""
+    }
+  }
+}]

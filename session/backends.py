@@ -27,7 +27,7 @@ except ImportError:
     AioMemcache = None  # pragma: no cover
 
 
-from starlette_session.interfaces import ISessionBackend
+from .interfaces import ISessionBackend
 
 _dumps = partial(dumps, protocol=HIGHEST_PROTOCOL)
 _loads = partial(loads)

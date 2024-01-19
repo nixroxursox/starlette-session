@@ -1,31 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
-  {% block head %}
-    {% include "head.html" %}
+<html>
+{% block head %}
+{% include "_head.html" with context %}
 {% endblock head %}
 
-  <body class="">
-  {% block body %}
-  {% block login %}
-  {% if request["url_path"] == '/login' %}
-  {% include "auth/login.html "%}
-   {% endif %}
-  {% endblock login %}
+  <body class="body">
+    <section>
+                    {% block nav %}
+                        {% include "_nav.html" %}
+                    {% endblock nav %}
+    </section>
+    <section class="body hero-image photo-back center" style="padding: 90px">
 
-  {% block reg %}
-{% if request["url_path"] == '/create-account' %}  
-    {% include "auth/register.html" %}
-     {% endif %}
-  {% endblock reg %}
-
-
-  <footer id="footer>
-  <div id="footer">
-    {% block footer %}
-    &copy; Copyright 2008 by <a href="http://nix.onion/">you</a>.
-    {% endblock footer %}
+                    {% block content %}
+                        {% if title == "login" %}
+                        {% include "/auth/login.html" %}
+                        {% elif title == "changepass" %}
+                        {% include "/auth/changepass.html" %}
+                        {% elif title == "register" %}
+                        {% include "/auth/register.html" %}
+                        {% elif title == "index" %}
+                        {% include "/index.html" %}
+                        {% elif title == "profile" %}
+                        {% include "/profile.html" %}
+                      {% endif %}
+                    {% endblock content %}
+    </section>
+  <div class="container-fluid footer">
+                     {% block footer %}
+                        {% include "_footer.html" %}
+                    {% endblock footer %}
   </div>
-  </footer>
-  {% endblock body %} 
-</body>
+  </body>
 </html>
+  

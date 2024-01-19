@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<div class="gridbox one">
+
+  <div class="hero-image gridbox two">
+        <div id="card" class=".fa-2x container">
+            <div id="card-content card-hover" class=".fa-2x">
+                <div id="card-title">
+                    <h2>
+                        {{ title }}
+                    </h2>
+                </div>
+                {% block formfill %}
+                   {% include 'auth/formfill.html' with context %}
+                {% endblock formfill %}
+            </div>
+        </div>
+    </div>
+ {% endblock content %}

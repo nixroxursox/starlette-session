@@ -15,7 +15,7 @@ from nacl.encoding import URLSafeBase64Encoder
 from urllib.parse import quote_plus
 from starlette.requests import Request, Request as request
 from starlette.responses import Response, JSONResponse
-from accounts import User
+from accounts import UserData as u
 from nacl.encoding import Base64Encoder
 from nacl.signing import SigningKey
 from decouple import config

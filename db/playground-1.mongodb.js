@@ -2,76 +2,32 @@
 // MongoDB Playground
 // Use Ctrl+Space inside a snippet or a string literal to trigger completions.
 
-const database = 'eComData';
-const collection = 'userData';
+// The current database to use.
+use('eCom');
 
-// Create a new database.
-use(database);
-
-// Create a new collection.
-db.createCollection(collection);
-
-db.createUser({
-    user: "dbReader",
-    pwd: 'changeMe',
-    roles:  [
-      { role: "read", db: "eComData"}
-    ]
-    })
-    db.createUser({
-    user: "dbWriter",
-    pwd: 'changeMe',
-    roles:  [
-      { role: "write", db: "eComData"}
-    ]
-    })
-    db.createUser({
-    user: "root",
-    pwd: 'changeMe',
-    roles:  [
-      { role: "dbOwner", db: "eComData"}
-    ]
-    })
-    
-    db.createUser(
+// Search for documents in the current collection.
+db.getCollection('session_data')
+  .findOne(
     {
-        user: "dbWriter",
-    
-        pwd: 'changeMe',
-    
-        roles:[
-        {
-            role: "read/write" , db:"eComData"}
-              ]
-    })
-
-// The prototype form to create a collection:
-/* db.createCollection( <name>,
-  {
-    capped: <boolean>,
-    autoIndexId: <boolean>,
-    size: <number>,
-    max: <number>,
-    storageEngine: <document>,
-    validator: <document>,
-    validationLevel: <string>,
-    validationAction: <string>,
-    indexOptionDefaults: <document>,
-    viewOn: <string>,
-    pipeline: <pipeline>,
-    collation: <document>,
-    writeConcern: <document>,
-    timeseries: { // Added in MongoDB 5.0
-      timeField: <string>, // required for time series collections
-      metaField: <string>,
-      granularity: <string>,
-      bucketMaxSpanSeconds: <number>, // Added in MongoDB 6.3
-      bucketRoundingSeconds: <number>, // Added in MongoDB 6.3
+      'reg_data.userId': '*'
+      /*
+      * Filter
+      * fieldA: value or expression
+      */
     },
-    expireAfterSeconds: <number>,
-    clusteredIndex: <document>, // Added in MongoDB 5.3
-  }
-)*/
-
-// More information on the `createCollection` command can be found at:
-// https://www.mongodb.com/docs/manual/reference/method/db.createCollection/
+    {
+      /*
+      * Projection
+      * _id: 0, // exclude _id
+      * fieldA: 1 // include field
+      */
+     'session_data.session_id': 1,
+     'session_data.metadata.lifetime': 1
+    }
+  )
+  .sort({
+    /*
+    * fieldA: 1 // ascending
+    * fieldB: -1 // descending
+    */
+  });

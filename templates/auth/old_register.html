@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card" id="card">
+  <div class="card-title">{{ title }}</div>
+<div class="card-content card-body text-center">
+{% block formfill %}
+  {% include "auth/formfill.html" with context %}
+{% endblock formfill %}
+</div>
+<div class="card-footer">footer</div>
+</div>
+{% endblock content %}

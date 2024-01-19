@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+                <html lang="en">
+                    <head>
+                      <title>{% block title %}{{ title }}{% endblock title %}</title>
+                    <meta name="viewport" content="website" initial-scale="1">
+                    <meta charset='utf-8'>
+                    <meta property='og:type' content='website'>
+                    <meta property='og:title' content='blah'>
+                    <meta name='twitter:card' content='summary'>
+                    <meta name='twitter:site' content='@thering'>
+                    <meta name='twitter:title' content=''>
+                    <meta name='twitter:description' content='blah'>
+                    <meta name='twitter:image' content='//blah'>
+
+                    <link href='http://localhost:8080/style/boot/bootstrap5.css' rel='stylesheet'>
+                    <link href='http://localhost:8080/style/fa/css/fontawesome.min.css' rel='stylesheet'>
+                    <link href='http://localhost:8080/style/fa/webfonts/fa-solid-900.ttf' rel='stylesheet'>
+                    <link href='http://localhost:8080/style/fa/css/solid.min.css' rel='stylesheet'>
+
+                    <style>
+                        @import url('http://localhost:8080/static/login.css');
+                        @import url('http://localhost:8080/style/boot/bootstrap5.css');
+                    </style>
+            </head>
+                <body class="body">
+                    {% block nav %}
+                        {% include "_nav.html" %}
+                    {% endblock nav %}
+            <div class="fa-2x hero-image body photo-back top-100" id="">
+                    <div id="card" class=".fa-2x container">
+                        {% block content %}
+                        <div id="card-content card-hover" class=".fa-2x">
+                            <div id="card-title">
+                                <h2>
+                                    {{ title }}
+                                </h2>
+                            </div>
+                            {% block formfill %}
+                               {% include 'auth/formfill.html' %}
+                            {% endblock formfill %}
+                        </div>
+                    </div>
+                </div>
+                    {% block footer %}
+                        {% include "_footer.html" %}
+                    {% endblock footer %}
+
+                {% endblock content %}
+            </body>
+        </html>
+
+
+        {# <form method="post" class="form">
+                <label for="user-email" style="padding-top:13px">
+                    &nbsp;Email
+                  </label>
+                <input id="user-email" class="form-content" type="email" name="email" autocomplete="on" required />
+                <div class="form-border"></div>
+                <label for="user-password" style="padding-top:22px">&nbsp;Password
+                  </label>
+                <input id="user-password" class="form-content" type="password" name="password" required />
+                <div class="form-border"></div>
+                <a href="#">
+                  <legend id="forgot-pass">Forgot password?</legend>
+                </a>
+                <input id="submit-btn" type="submit" name="submit" value="LOGIN" />
+                <a href="#" id="signup">Don't have account yet?</a>
+              </form> #}
+
+
+        <!-- {% if login: %}
+                     {% block login %}
+        
+                     {% endblock login %}
+                {% endif %}
+                {% if register: %}
+                     {% block register %}
+        
+                     {% endblock register %}
+                  {% endif %} -->

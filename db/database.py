@@ -4,12 +4,12 @@ from urllib.parse import quote_plus
 import pymongo
 from pymongo.mongo_client import MongoClient as mc
 from pymongo.errors import PyMongoError
-import nacl
-from nacl import pwhash, utils, exceptions
 from decouple import config
 import multiprocessing
-
-
+import motor
+import uvloop
+from motor.motor_asyncio import AsyncIOMotorClient as motor_async
+import asyncio
 # directory reach
 
 
@@ -22,37 +22,95 @@ wp = config("writePass")
 
 
 class dataBase:
-    async def __init__(self, *args, **kwargs):
-        self.method: str = None
-        db = "eComData"
-        col = "userLogins"
-        socket_path = "%2Ftmp%2Fmongodb-27017.sock"
-        dbUser = None
-        dbPass = None
-        authSource = "theRing"
-        mechanism = "SCRAM-SHA-256"
-        dbObj = "theRing"
-        doc_class = "dict"
-        uri = "mongodb://%s:%s@%s" % (
-            quote_plus(dbUser),
-            quote_plus(dbPass),
-            quote_plus(socket_path),
+    def __init__(self, method, db, col):
+        self.conn: dict = {}
+        self.conn['method']: str = 'method'
+        self.conn['db']: str  = 'db'
+        self.conn['col'] = 'col'
+        self.conn['socket_path'] = '%2Ftmp%2Fmongodb-27017.sock'
+        self.conn['dbUser'] = self._userType(self.conn['method'])
+        if self.conn['dbUser'] == 'wu':
+            self.conn['dbPass'] = config('writePass')
+        else:
+            self.conn['dbPass'] = config('readPass')    
+        self.conn['aS']: str = 'eCom'
+        self.conn['mechanism'] = 'SCRAM-SHA-256'
+        self.conn[ 'dc'] = 'dict'
+        self.connect: bool = True
+        self.conn['uri'] = "mongodb://%s:%s@%s" % (
+            quote_plus(self.conn['dbUser']),
+            quote_plus(self.conn['dbPass']),
+            quote_plus(self.conn['socket_path']),
         )
 
-    async def _userType(method):
-        if method == "read":
-            dbUser = ru
-            dbPass = rp
-            return dbUser, dbPass
-        else:
+
+    def __call__(self, method):
+        method: self.conn['method'] = method
+        return self
+            
+    @staticmethod
+    def db_connect():
+        method = 'read'
+        conn = {}
+        conn['dbUser'] = 'ru'
+        conn['dbPass'] = config('readPass')    
+        mechanism = 'SCRAM-SHA-256'
+        aS = 'eCom'
+        dc = 'dict'
+        conn['socket_path'] = '%2Ftmp%2Fmongodb-27017.sock'
+        uri = "mongodb://%s:%s@%s" % (
+            quote_plus(conn['dbUser']),
+            quote_plus(conn['dbPass']),
+            quote_plus(conn['socket_path'])
+        )
+        connect = True
+        client = motor.motor_asyncio.AsyncIOMotorClient(
+            uri,
+            document_class=dc,
+            authSource=aS,
+            authMechanism=mechanism,
+            connect=connect
+        )
+        return client['eCom']
+
+    @staticmethod
+    def db_client():
+        method = 'read'
+        conn = {}
+        conn['dbUser'] = 'ru'
+        conn['dbPass'] = config('readPass')    
+        mechanism = 'SCRAM-SHA-256'
+        aS = 'eCom'
+        dc = 'dict'
+        conn['socket_path'] = '%2Ftmp%2Fmongodb-27017.sock'
+        uri = "mongodb://%s:%s@%s" % (
+            quote_plus(conn['dbUser']),
+            quote_plus(conn['dbPass']),
+            quote_plus(conn['socket_path'])
+        )
+        connect = True
+        client = motor.motor_asyncio.AsyncIOMotorClient(
+            uri,
+            document_class=dc,
+            authSource=aS,
+            authMechanism=mechanism,
+            connect=connect
+        )
+        return client
+
+    def _userType(self, method):
+        if method == "write":
             dbUser = wu
-            dbPass = wp
-            return dbUser, dbPass
+            return dbUser
+        else:
+            dbUser = ru
+            return dbUser
+
 
     async def nConfig(method):
-        authSource = "eComData"
+        authSource = "eCom"
         mechanism = "SCRAM-SHA-256"
-        dbObj = "eComData"
+        dbObj = "eCom"
         #host = "%2Ftmp%2Fmongodb-27017.sock"
         host = "dockerswarm-mongod-1"
         port = 27017
@@ -74,20 +132,51 @@ class dataBase:
         return db
 
 
-    async def usConf(method):
-        if method == "read":
-            dbUser = ru
-            dbPass = rp
-        else:
+    def motorConf(self, method):
+        if method == "write":
             dbUser = wu
             dbPass = wp
+        else:
+            dbUser = ru
+            dbPass = rp
         username = dbUser
         password = dbPass
         u = quote_plus(username)
         p = quote_plus(password)
-        authSource = "eComData"
+        authSource = 'eCom'
         mechanism = "SCRAM-SHA-256"
-        dbObj = "eComData"
+        dbObj = "eCom"
+        loop = asyncio.get_event_loop()
+        document_class = dict
+        socket_path = quote_plus("/tmp/mongodb-27017.sock")
+        connect = True
+        uri = "mongodb://%s:%s@%s/%s" % (u, p, socket_path, dbObj)
+        client = motor.motor_asyncio.AsyncIOMotorClient(
+            uri,
+            document_class=document_class,
+            authSource=authSource, 
+            authMechanism=mechanism,
+            connect=connect,
+            io_loop=loop
+        )
+        #db = client["eCom"]
+        return client
+
+
+    def pyMongoConf(self, method):
+        if method == "write":
+            dbUser = wu
+            dbPass = wp
+        else:
+            dbUser = ru
+            dbPass = rp
+        username = dbUser
+        password = dbPass
+        u = quote_plus(username)
+        p = quote_plus(password)
+        authSource = 'eCom'
+        mechanism = "SCRAM-SHA-256"
+        dbObj = "eCom"
         document_class = dict
         socket_path = quote_plus("/tmp/mongodb-27017.sock")
         connect = True
@@ -99,8 +188,15 @@ class dataBase:
             authMechanism=mechanism,
             connect=connect
         )
-        #db = client["eComData"]
+        #db = client["eCom"]
         return client
+
+    async def db_find_one(self, item):
+        self.item = item
+        cl = self.usConf('read')
+        col = cl.eCom.userData
+        return col.find_one({'reg_data.userId': item})
+        
 
     async def connX509(self):
         client = pymongo.mongo_client.MongoClient(
@@ -115,9 +211,10 @@ class dataBase:
 
     async def disconnect(self):
         return db.close()
+       
 
     # def checkPass(dbDict):
-    #     if dataBase.findUser == True:
+    #     if dataBase.findUser == True:s
     #         try:
     #             dbr = dataBase.conf("read")
     #             rcol = dbr["userLogins"]
@@ -215,3 +312,6 @@ class q:
     def insert_one():
         record = '{"userId": fuserId, "password": fpasswd, "pin_code": fpinCode, "NickName": fnickName}'
         return record
+
+    def find_one_and_update():
+        return '{"reg_data.userId": user},  { "$set": {"session_data.session_id": session_id, "data": data, "lifetime": lifetime, "ttl": ttl}}'

@@ -8,13 +8,16 @@ from itsdangerous.exc import BadTimeSignature, SignatureExpired
 from starlette.datastructures import MutableHeaders
 from starlette.requests import HTTPConnection
 from starlette.types import ASGIApp, Message, Receive, Scope, Send
+import aiomcache
 
-from starlette_session.backends import (AioMemcacheSessionBackend,
+from session.backends import (AioMemcacheSessionBackend,
                                         AioRedisSessionBackend, BackendType,
                                         MemcacheSessionBackend,
                                         RedisSessionBackend)
-from starlette_session.interfaces import ISessionBackend
+from session.interfaces import ISessionBackend
 
+
+memcache_client = aiomcache.Client("dockerswarm-memcached-1",11211)
 
 class UnknownPredefinedBackend(Exception):
     pass
@@ -26,12 +29,12 @@ class SessionMiddleware:
         app: ASGIApp,
         secret_key: str,
         cookie_name: str,
-        max_age: int = 14 * 24 * 60 * 60,  # 14 days, in seconds
+        max_age: int = 0 * 3 * 60 * 60,  # 14 days, in seconds
         same_site: str = "lax",
         https_only: bool = False,
         domain: Optional[str] = None,
         backend_type: Optional[BackendType] = None,
-        backend_client: Optional[Any] = None,
+        backend_client: Optional[Any] = memcache_client,
         custom_session_backend: Optional[ISessionBackend] = None,
     ) -> None:
         """ Session Middleware

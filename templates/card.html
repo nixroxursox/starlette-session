@@ -1,0 +1,18 @@
+
+{% block content %}
+<div class="fa-2x hero-image body photo-back" id="card">
+    <div id="card" class=".fa-2x container ">
+        {% block content %}
+        <div id="card-content card-hover" class=".fa-1x">
+            <div id="card-title">
+                <h2>
+                    {{ title }}
+                </h2>
+            </div>
+            {% block formfill %}
+               {% include 'auth/formfill.html' %}
+            {% endblock formfill %}
+        </div>
+    </div>
+</div>
+{% endblock content %}
