@@ -4,6 +4,7 @@ from typing import Any, Optional
 from uuid import uuid4
 
 import itsdangerous
+from 
 from itsdangerous.exc import BadTimeSignature, SignatureExpired
 from starlette.datastructures import MutableHeaders
 from starlette.requests import HTTPConnection
@@ -15,8 +16,6 @@ from starlette_session.backends import (AioMemcacheSessionBackend,
                                         RedisSessionBackend)
 from starlette_session.interfaces import ISessionBackend
 
-
-memcache_client = aiomcache.Client("dockerswarm-memcached-1",11211)
 
 class UnknownPredefinedBackend(Exception):
     pass
